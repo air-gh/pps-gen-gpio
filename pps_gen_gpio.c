@@ -198,7 +198,7 @@ static int pps_gen_gpio_probe(struct platform_device *pdev)
 		return -ENOMEM;
 
 	/* pps-gen is the function associated with gpio list pps-gen-gpios */
-	devdata->pps_gpio = devm_gpiod_get(dev, "pps-gen");
+	devdata->pps_gpio = devm_gpiod_get(dev, "pps-gen", GPIOD_ASIS); /* from enum gpiod_flags */
 	if (IS_ERR(devdata->pps_gpio)) {
 		dev_err(dev, "cannot get PPS GPIO %ld\n",
 			PTR_ERR(devdata->pps_gpio));
