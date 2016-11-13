@@ -233,7 +233,7 @@ static int pps_gen_gpio_remove(struct platform_device *pdev)
  * when a match is found, the corresponding DT node name is passed
  * backed in pdev->name */
 static const struct of_device_id pps_gen_gpio_dt_ids[] = {
-	{ .compatible = "pps-gen-gpios", },
+	{ .compatible = "pps-generator-gpios", },
 	{ /* sentinel */ }
 };
 MODULE_DEVICE_TABLE(of, pps_gen_gpio_dt_ids);
